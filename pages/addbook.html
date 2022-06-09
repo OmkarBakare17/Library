@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Book</title>
+</head>
+<body>
+
+        <center>
+            <a href="/keywordio/book/">Back</a><br>
+            ADD BOOK<br><br>
+            <form action="/keywordio/addbook/" method="post">
+                {% csrf_token %}
+                Book Name     :   <input type="text" name="name"><br><br>
+                Auther Name   :   <input type="text" name="auther"><br><br>
+                Status        :   <input type="text" name="status"><br><br>
+                <input type="submit" value="Add Book"><br><br>
+                {{message}}
+
+                    <br><br><a href="/keywordio/">logout</a>
+
+            </form>
+        </center>
+
+</body>
+</html>

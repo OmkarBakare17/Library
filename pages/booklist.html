@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book List</title>
+</head>
+<body>
+
+    <center>
+        <a href="/keywordio/book/">Back</a><br>
+        BOOK LIST<br>
+      <table border="1">
+        <thead>
+            <tr>
+                <th>Book ID</th>
+                <th>Book Nmae</th>
+                <th>Auther Name</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            {% for book in book_list %}
+                <tr>
+                    <td>{{book.id}}</td>
+                    <td>{{book.name}}</td>
+                    <td>{{book.auther}}</td>
+                    <td>{{book.status}}</td>
+                    <td><a href="/keywordio/update/{{book.id}}">Update</a>|
+                        <a href="/keywordio/delete/{{book.id}}">Delete</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </center>
+
+</body>
+</html>

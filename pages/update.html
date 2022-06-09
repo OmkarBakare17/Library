@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Book</title>
+</head>
+<body>
+
+    <center>
+        <a href="/keywordio/booklist/">Back</a><br>
+            UPDATE BOOK<br><br>
+            <form action="/keywordio/addbook/" method="post">
+                {% csrf_token %}
+                Book ID     :   <input type="text" name="bid" readonly value="{{book.id}}"><br><br>
+                Book Name     :   <input type="text" name="name" value="{{book.name}}"><br><br>
+                Auther Name   :   <input type="text" name="auther" value="{{book.auther}}"><br><br>
+                status        :   <input type="text" name="status" value="{{book.status}}"><br><br>
+                <input type="submit" value="Update Book"><br><br>
+                {{message}}
+                    <br><br><a href="/keywordio/">logout</a>
+
+            </form>
+        </center>
+
+</body>
+</html>

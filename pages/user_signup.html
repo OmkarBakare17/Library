@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Emp_Info</title>
+</head>
+<body>
+<center>
+    <a href="/keywordio/">Back</a><br><br>
+    SIGN UP
+    <form action="/keywordio/signup/" method="post">
+        {% csrf_token %}
+        Name : <input type="text" name="name" minlength="4"><br><br>
+        Email ID : <input type="text" name="mail" minlength="4"><br><br>
+        Password : <input type="password" name="password" minlength="4" maxlength="16"><br><br>
+        <input type="submit" value="Sign Up"><br><br>
+        {{message}}
+        </center>
+    </form>
+
+</body>
+</html>
